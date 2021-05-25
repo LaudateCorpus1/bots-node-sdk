@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>lib/component/baseContext.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="BaseContext.html">BaseContext</a><ul class='methods'><li data-type='method'><a href="BaseContext.html#constructMessagePayload">constructMessagePayload</a></li><li data-type='method'><a href="BaseContext.html#getChannelType">getChannelType</a></li><li data-type='method'><a href="BaseContext.html#getLogger">getLogger</a></li><li data-type='method'><a href="BaseContext.html#getMessageModel">getMessageModel</a></li><li data-type='method'><a href="BaseContext.html#getRequest">getRequest</a></li><li data-type='method'><a href="BaseContext.html#getResponse">getResponse</a></li><li data-type='method'><a href="BaseContext.html#getVariable">getVariable</a></li><li data-type='method'><a href="BaseContext.html#logger">logger</a></li><li data-type='method'><a href="BaseContext.html#setVariable">setVariable</a></li><li data-type='method'><a href="BaseContext.html#translate">translate</a></li><li data-type='method'><a href="BaseContext.html#variable">variable</a></li></ul></li><li><a href="CustomComponentContext.html">CustomComponentContext</a><ul class='methods'><li data-type='method'><a href="CustomComponentContext.html#.sdkVersion">sdkVersion</a></li><li data-type='method'><a href="CustomComponentContext.html#attachment">attachment</a></li><li data-type='method'><a href="CustomComponentContext.html#botId">botId</a></li><li data-type='method'><a href="CustomComponentContext.html#channelId">channelId</a></li><li data-type='method'><a href="CustomComponentContext.html#channelType">channelType</a></li><li data-type='method'><a href="CustomComponentContext.html#constructMessagePayload">constructMessagePayload</a></li><li data-type='method'><a href="CustomComponentContext.html#error">error</a></li><li data-type='method'><a href="CustomComponentContext.html#getChannelType">getChannelType</a></li><li data-type='method'><a href="CustomComponentContext.html#getLogger">getLogger</a></li><li data-type='method'><a href="CustomComponentContext.html#getMessageModel">getMessageModel</a></li><li data-type='method'><a href="CustomComponentContext.html#getRequest">getRequest</a></li><li data-type='method'><a href="CustomComponentContext.html#getResponse">getResponse</a></li><li data-type='method'><a href="CustomComponentContext.html#getVariable">getVariable</a></li><li data-type='method'><a href="CustomComponentContext.html#invalidUserInput">invalidUserInput</a></li><li data-type='method'><a href="CustomComponentContext.html#keepTurn">keepTurn</a></li><li data-type='method'><a href="CustomComponentContext.html#location">location</a></li><li data-type='method'><a href="CustomComponentContext.html#logger">logger</a></li><li data-type='method'><a href="CustomComponentContext.html#MessageModel">MessageModel</a></li><li data-type='method'><a href="CustomComponentContext.html#messagePayload">messagePayload</a></li><li data-type='method'><a href="CustomComponentContext.html#nlpResult">nlpResult</a></li><li data-type='method'><a href="CustomComponentContext.html#platformVersion">platformVersion</a></li><li data-type='method'><a href="CustomComponentContext.html#postback">postback</a></li><li data-type='method'><a href="CustomComponentContext.html#properties">properties</a></li><li data-type='method'><a href="CustomComponentContext.html#rawPayload">rawPayload</a></li><li data-type='method'><a href="CustomComponentContext.html#releaseTurn">releaseTurn</a></li><li data-type='method'><a href="CustomComponentContext.html#reply">reply</a></li><li data-type='method'><a href="CustomComponentContext.html#request">request</a></li><li data-type='method'><a href="CustomComponentContext.html#sessionId">sessionId</a></li><li data-type='method'><a href="CustomComponentContext.html#setVariable">setVariable</a></li><li data-type='method'><a href="CustomComponentContext.html#text">text</a></li><li data-type='method'><a href="CustomComponentContext.html#transition">transition</a></li><li data-type='method'><a href="CustomComponentContext.html#translate">translate</a></li><li data-type='method'><a href="CustomComponentContext.html#userId">userId</a></li><li data-type='method'><a href="CustomComponentContext.html#variable">variable</a></li></ul></li><li><a href="EntityResolutionContext.html">EntityResolutionContext</a><ul class='methods'><li data-type='method'><a href="EntityResolutionContext.html#addCandidateMessages">addCandidateMessages</a></li><li data-type='method'><a href="EntityResolutionContext.html#addMessage">addMessage</a></li><li data-type='method'><a href="EntityResolutionContext.html#addValidationError">addValidationError</a></li><li data-type='method'><a href="EntityResolutionContext.html#cancel">cancel</a></li><li data-type='method'><a href="EntityResolutionContext.html#clearDisambiguationValues">clearDisambiguationValues</a></li><li data-type='method'><a href="EntityResolutionContext.html#clearItemValue">clearItemValue</a></li><li data-type='method'><a href="EntityResolutionContext.html#constructMessagePayload">constructMessagePayload</a></li><li data-type='method'><a href="EntityResolutionContext.html#getCandidateMessages">getCandidateMessages</a></li><li data-type='method'><a href="EntityResolutionContext.html#getChannelType">getChannelType</a></li><li data-type='method'><a href="EntityResolutionContext.html#getCurrentItem">getCurrentItem</a></li><li data-type='method'><a href="EntityResolutionContext.html#getCustomProperty">getCustomProperty</a></li><li data-type='method'><a href="EntityResolutionContext.html#getDisambiguationValues">getDisambiguationValues</a></li><li data-type='method'><a href="EntityResolutionContext.html#getDisplayValue">getDisplayValue</a></li><li data-type='method'><a href="EntityResolutionContext.html#getDisplayValues">getDisplayValues</a></li><li data-type='method'><a href="EntityResolutionContext.html#getEntity">getEntity</a></li><li data-type='method'><a href="EntityResolutionContext.html#getEntityItems">getEntityItems</a></li><li data-type='method'><a href="EntityResolutionContext.html#getEntityName">getEntityName</a></li><li data-type='method'><a href="EntityResolutionContext.html#getEnumValues">getEnumValues</a></li><li data-type='method'><a href="EntityResolutionContext.html#getItemsMatched">getItemsMatched</a></li><li data-type='method'><a href="EntityResolutionContext.html#getItemsMatchedOutOfOrder">getItemsMatchedOutOfOrder</a></li><li data-type='method'><a href="EntityResolutionContext.html#getItemsUpdated">getItemsUpdated</a></li><li data-type='method'><a href="EntityResolutionContext.html#getItemValue">getItemValue</a></li><li data-type='method'><a href="EntityResolutionContext.html#getLogger">getLogger</a></li><li data-type='method'><a href="EntityResolutionContext.html#getMessageModel">getMessageModel</a></li><li data-type='method'><a href="EntityResolutionContext.html#getMessages">getMessages</a></li><li data-type='method'><a href="EntityResolutionContext.html#getRequest">getRequest</a></li><li data-type='method'><a href="EntityResolutionContext.html#getResponse">getResponse</a></li><li data-type='method'><a href="EntityResolutionContext.html#getUserInput">getUserInput</a></li><li data-type='method'><a href="EntityResolutionContext.html#getValidationErrors">getValidationErrors</a></li><li data-type='method'><a href="EntityResolutionContext.html#getVariable">getVariable</a></li><li data-type='method'><a href="EntityResolutionContext.html#isFullEntityMatches">isFullEntityMatches</a></li><li data-type='method'><a href="EntityResolutionContext.html#isSkippedItem">isSkippedItem</a></li><li data-type='method'><a href="EntityResolutionContext.html#logger">logger</a></li><li data-type='method'><a href="EntityResolutionContext.html#setCustomProperty">setCustomProperty</a></li><li data-type='method'><a href="EntityResolutionContext.html#setDisambiguationValues">setDisambiguationValues</a></li><li data-type='method'><a href="EntityResolutionContext.html#setEntity">setEntity</a></li><li data-type='method'><a href="EntityResolutionContext.html#setItemValue">setItemValue</a></li><li data-type='method'><a href="EntityResolutionContext.html#setSystemEntityDisplayFunction">setSystemEntityDisplayFunction</a></li><li data-type='method'><a href="EntityResolutionContext.html#setSystemEntityDisplayProperties">setSystemEntityDisplayProperties</a></li><li data-type='method'><a href="EntityResolutionContext.html#setVariable">setVariable</a></li><li data-type='method'><a href="EntityResolutionContext.html#skipItem">skipItem</a></li><li data-type='method'><a href="EntityResolutionContext.html#translate">translate</a></li><li data-type='method'><a href="EntityResolutionContext.html#unskipItem">unskipItem</a></li><li data-type='method'><a href="EntityResolutionContext.html#variable">variable</a></li></ul></li><li><a href="MessageModel.html">MessageModel</a><ul class='methods'><li data-type='method'><a href="MessageModel.html#.addChannelExtensions">addChannelExtensions</a></li><li data-type='method'><a href="MessageModel.html#.addGlobalAction">addGlobalAction</a></li><li data-type='method'><a href="MessageModel.html#.addGlobalActions">addGlobalActions</a></li><li data-type='method'><a href="MessageModel.html#.attachmentConversationMessage">attachmentConversationMessage</a></li><li data-type='method'><a href="MessageModel.html#.callActionObject">callActionObject</a></li><li data-type='method'><a href="MessageModel.html#.cardConversationMessage">cardConversationMessage</a></li><li data-type='method'><a href="MessageModel.html#.cardObject">cardObject</a></li><li data-type='method'><a href="MessageModel.html#.locationActionObject">locationActionObject</a></li><li data-type='method'><a href="MessageModel.html#.locationConversationMessage">locationConversationMessage</a></li><li data-type='method'><a href="MessageModel.html#.postbackActionObject">postbackActionObject</a></li><li data-type='method'><a href="MessageModel.html#.postbackConversationMessage">postbackConversationMessage</a></li><li data-type='method'><a href="MessageModel.html#.postbackKeyword">postbackKeyword</a></li><li data-type='method'><a href="MessageModel.html#.rawConversationMessage">rawConversationMessage</a></li><li data-type='method'><a href="MessageModel.html#.shareActionObject">shareActionObject</a></li><li data-type='method'><a href="MessageModel.html#.textConversationMessage">textConversationMessage</a></li><li data-type='method'><a href="MessageModel.html#.urlActionObject">urlActionObject</a></li><li data-type='method'><a href="MessageModel.html#.validateConversationMessage">validateConversationMessage</a></li><li data-type='method'><a href="MessageModel.html#isValid">isValid</a></li><li data-type='method'><a href="MessageModel.html#messagePayload">messagePayload</a></li><li data-type='method'><a href="MessageModel.html#rawPayload">rawPayload</a></li><li data-type='method'><a href="MessageModel.html#validationError">validationError</a></li></ul></li><li><a href="module-Middleware.WebhookClient.html">WebhookClient</a><ul class='methods'><li data-type='method'><a href="module-Middleware.WebhookClient.html#MessageModel">MessageModel</a></li><li data-type='method'><a href="module-Middleware.WebhookClient.html#on">on</a></li><li data-type='method'><a href="module-Middleware.WebhookClient.html#receiver">receiver</a></li><li data-type='method'><a href="module-Middleware.WebhookClient.html#send">send</a></li></ul></li><li><a href="module-Testing.MockConversation.html">MockConversation</a><ul class='methods'><li data-type='method'><a href="module-Testing.MockConversation.html#.any">any</a></li><li data-type='method'><a href="module-Testing.MockConversation.html#.fromRequest">fromRequest</a></li><li data-type='method'><a href="module-Testing.MockConversation.html#getReplies">getReplies</a></li></ul></li><li><a href="NLPResult.html">NLPResult</a><ul class='methods'><li data-type='method'><a href="NLPResult.html#entityMatches">entityMatches</a></li><li data-type='method'><a href="NLPResult.html#fullEntityMatches">fullEntityMatches</a></li><li data-type='method'><a href="NLPResult.html#intentMatches">intentMatches</a></li><li data-type='method'><a href="NLPResult.html#topIntentMatch">topIntentMatch</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-CLI.html">CLI</a></li><li><a href="module-Config.html">Config</a><ul class='methods'><li data-type='method'><a href="module-Config.html">setLogger</a></li></ul></li><li><a href="module-Lib.html">Lib</a></li><li><a href="module-Middleware.html">Middleware</a><ul class='methods'><li data-type='method'><a href="module-Middleware.html#.customComponent">customComponent</a></li><li data-type='method'><a href="module-Middleware.html#.webhookReceiver">webhookReceiver</a></li></ul></li><li><a href="module-Testing.html">Testing</a><ul class='methods'><li data-type='method'><a href="module-Testing.html#.MockCompositeBagEntityVariable">MockCompositeBagEntityVariable</a></li><li data-type='method'><a href="module-Testing.html#.MockCompositeBagItem">MockCompositeBagItem</a></li><li data-type='method'><a href="module-Testing.html#.MockEventHandlerRequest">MockEventHandlerRequest</a></li><li data-type='method'><a href="module-Testing.html#.MockRequest">MockRequest</a></li><li data-type='method'><a href="module-Testing.html#.MockResolveEntitiesEvent">MockResolveEntitiesEvent</a></li></ul></li><li><a href="module-Util.html">Util</a></li><li><a href="module-Util_MessageModel.html">Util/MessageModel</a><ul class='methods'><li data-type='method'><a href="module-Util_MessageModel.html#.cardToText">cardToText</a></li><li data-type='method'><a href="module-Util_MessageModel.html#.convertRespToText">convertRespToText</a></li></ul></li><li><a href="module-Util_Text.html">Util/Text</a><ul class='methods'><li data-type='method'><a href="module-Util_Text.html#.approxTextMatch">approxTextMatch</a></li></ul></li><li><a href="module-Util_Webhook.html">Util/Webhook</a><ul class='methods'><li data-type='method'><a href="module-Util_Webhook.html#.bodyParserRawMessageVerify">bodyParserRawMessageVerify</a></li><li data-type='method'><a href="module-Util_Webhook.html#.buildSignatureHeader">buildSignatureHeader</a></li><li data-type='method'><a href="module-Util_Webhook.html#.messageToBot">messageToBot</a></li><li data-type='method'><a href="module-Util_Webhook.html#.messageToBotWithProperties">messageToBotWithProperties</a></li><li data-type='method'><a href="module-Util_Webhook.html#.verifyMessageFormat">verifyMessageFormat</a></li></ul></li></ul><h3>Externals</h3><ul><li><a href="external-ExpressApplication.html">ExpressApplication</a></li><li><a href="external-ExpressRequest.html">ExpressRequest</a></li><li><a href="external-ExpressResponse.html">ExpressResponse</a></li><li><a href="external-ExpressRouter.html">ExpressRouter</a></li></ul><h3>Global</h3><ul><li><a href="global.html#init">init</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">lib/component/baseContext.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>'use strict';
+
+const { CommonProvider } = require("../../common/provider");
+const { CommonValidator } = require("../../common/validator");
+const { ERROR } = require("../../common/error");
+const { MessageModel } = require("../message/messageModel");
+
+const VARIABLE = {
+  type: "string",
+  entity: false
+};
+
+/**
+ * Super class for concrete context classes used to invoke custom components
+ * and event handlers
+ * @memberof module:Lib
+ * @alias BaseContext
+ */
+class BaseContext {
+  /**
+   * @param {object} request - invocation request payload
+   * @param {object} response - initial response payload
+   * @param {Function} [validationSchema] - callback returns a schema for request body validation
+   */
+  constructor(request, response, validationSchema) {
+    const validation = validationSchema &amp;&amp; validateRequestSchema(request, validationSchema);
+    if (validation &amp;&amp; validation.error) {
+      const err = new Error('Request body malformed');
+      err.name = 'badRequest';
+      err.details = createErrorDetails('Request body malformed',
+        JSON.stringify(validation.error),
+        'BOTS-1000', {
+          requestBody: request,
+        });
+      throw err;
+    }
+    // filling in response context vars fromn request
+    response.context = Object.assign({variables: {}}, request.context);
+    this._request = request;
+    this._response = response;
+    this._logger = CommonProvider.getLogger();
+  }
+
+  /**
+   * Retrieves the request object.
+   * @return {object} The request object.
+   */
+  getRequest() {
+    return this._request;
+  }
+
+  /**
+   * Retrieves the response object.
+   * @return {object} The response object.
+   */
+  getResponse() {
+    return this._response;
+  }
+ 
+  /**
+   * Retrieves the logger object.
+   * @return {object} The logger object.
+   */
+  logger() {
+    // this function is replaced with mixin logger when deployed to embedded functions to enable viewing logs in bots UI
+    return this._logger;
+  }
+
+  /**
+   * Retrieves the logger object.
+   * @return {object} The logger object.
+   * @deprecated use logger() function instead
+   */
+  getLogger() {
+    this.logger().warn('The getLogger() method is deprecated, and will be removed in a future release. Use logger() method instead.');
+    return this.logger();
+  }
+
+  /**
+   * Read or write variables defined in the current flow.
+   * It is not possible to change the type of an existing variable through
+   * this method.  It is the caller's responsibility to ensure that the
+   * value being set on a variable is of the correct type. (e.g. entity,
+   * string or other primitive, etc).
+   * &lt;p>
+   * A new variable can be created.  However, since the variable is not
+   * defined in the flow, using it in the flow subsequently may be flagged
+   * for validation warnings.
+   * &lt;/p>
+   * This function takes a variable number of arguments.
+   * &lt;p>
+   * The first form:
+   * variable(name);
+   * reads the variable called "name", returning its value.
+   * The name could be in the form of &amp;lt;scope&amp;gt;.&amp;lt;variableName&amp;gt;.  For example, a variable firstName in the
+   * profile scope needs to be retrieved as variable("profile.firstName").
+   * &lt;/p>
+   * The second form:
+   * variable(name, value);
+   * writes the value "value" to the variable called "name".
+   *
+   * @param {string} name - The name of variable to be set or read
+   * @param {string} [value] - value to be set for variable
+   * @example
+   * let firstName = conversation.variable("profile.firstName");
+   * let lastName = conversation.variable("profile.lastName");
+   * conversation.variable("fullName", firstName + ' ' + lastName);
+   */
+  variable(name, value) {
+
+    var context = this.getResponse().context;
+    var scopeName = null;
+    var nameToUse = name;
+    var index = name.indexOf(".");
+
+    if (index > -1) {
+      scopeName = name.substring(0, index);
+      var possibleScope = context;
+      while (possibleScope) {
+        if (possibleScope.scope === scopeName) {
+          context = possibleScope;
+          nameToUse = name.substring(index + 1, name.length);
+          break;
+        } else {
+          //this is to handle the case when the variable name is system.XXX but system is not a scope 
+          if (possibleScope.variables &amp;&amp; possibleScope.variables.hasOwnProperty(nameToUse)) {
+            context = possibleScope;
+            break;
+          }
+          possibleScope = possibleScope.parent;
+        }
+      }
+    }
+
+    if (value === undefined) {
+      if (!context.variables || !context.variables.hasOwnProperty(nameToUse)) {
+        return undefined;
+      }
+      return context.variables[nameToUse].value;
+    } else {
+      this.logger().debug('SDK: About to set variable ' + name);
+
+      if (!context.variables) {
+        context.variables = {};
+      }
+      if (!context.variables[nameToUse]) {
+        this.logger().debug('SDK: Creating new variable ' + nameToUse);
+        context.variables[nameToUse] = Object.assign({}, VARIABLE);
+      }
+
+      context.variables[nameToUse].value = value;
+      this.getResponse().modifyContext = true;
+
+      this.logger().debug('SDK: Setting variable ' + JSON.stringify(context.variables[nameToUse]));
+      return this;
+    }
+  }
+
+  /**
+   * Returns the value of a context or user variable
+   * @return {object} variable value
+   * @param {string} name - name of the variable
+   */
+  getVariable(name) {
+    return this.variable(name);
+  }
+
+  /**
+   * Sets the value of a context or user variable
+   * @param {string} name - name of the variable
+   * @param {object} value - value of the variable
+   */
+  setVariable(name,value) {
+    return this.variable(name,value);
+  }
+
+  /**
+   * Get translated string using a resource bundle key defined in the skill.
+   * @return {string} resource bundle freemarker expression that will be resolved when event handler or custom component response is 
+   * received by dialog engine
+   * @param {string} rbKey - key of the resource bundle entry defined with the skill that should be used to translate
+   * @param {string} rbArgs - substitution variables
+   */
+  translate(rbKey, ...rbArgs) {
+    // create freemarker expression that will be resolved in runtime after event handler or custom component response is received
+    let exp = "${rb('"+rbKey+"','"+rbArgs.join('\',\'')+"')}";
+    return exp;
+  }  
+
+  /**
+   * Return the channel conversation type
+   * @return {string} the channel type
+   */
+  getChannelType() {
+    return this.getRequest().message.channelConversation.type;
+  }
+
+  /**
+   * Returns the MessageModel class for creating or validating messages to or from bots.
+   * @see MessageModel.js
+   * @return {MessageModel} The MessageModel class
+   */
+  getMessageModel() {
+    return MessageModel;
+  }
+
+  /**
+   * Creates a message payload object
+   * @param {object} payload - can take a string payload, an object payload or a MessageModel payload.  A string or object payload will be parsed
+   * into a MessageModel payload.  If the MessageModel payload has a valid common message format, then reply will use it as
+   * messagePayload, else it will use the payload to create a rawConversationMessage (see MessageModel) as messagePayload.
+   */
+  constructMessagePayload(payload) {
+    var messagePayload;
+    var messageModel;
+    if (payload instanceof MessageModel) {
+      this.logger().debug('messageModel payload provided');
+      messageModel = payload;
+    } else {
+      this.logger().debug('creating messageModel with payload');
+      messageModel = new MessageModel(payload);
+    }
+    if (messageModel.isValid()) {
+      this.logger().debug('valid messageModel');
+      messagePayload = messageModel.messagePayload();
+    } else {
+      this.logger().debug('message model validation error:', messageModel.validationError());
+      this.logger().debug('using rawPayload');
+      var rawMessagePayload = MessageModel.rawConversationMessage(payload);
+      messageModel = new MessageModel(rawMessagePayload);
+      if (messageModel.isValid()) {
+        this.logger().debug('valid messageModel for rawMessagePayload');
+        messagePayload = messageModel.messagePayload();
+      } else {
+        this.logger().debug('message model raw message validation error:', messageModel.validationError());
+      }
+    }
+    return messagePayload;
+  }
+
+}
+
+function createErrorDetails(title, detail, errorCode, errorDetails) {
+  const details = Object.assign({}, ERROR);
+  details.title = title;
+  details.detail = detail;
+  details['o:errorCode'] = errorCode;
+  details['o:errorDetails'] = errorDetails;
+  return details;
+}
+
+function validateRequestSchema(reqBody, validationSchema) {
+  return CommonValidator.validate(validationSchema, reqBody, { allowUnknown: true });
+}
+
+module.exports = {
+  BaseContext,
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

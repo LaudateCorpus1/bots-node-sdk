@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>lib/component/sdk.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="BaseContext.html">BaseContext</a><ul class='methods'><li data-type='method'><a href="BaseContext.html#constructMessagePayload">constructMessagePayload</a></li><li data-type='method'><a href="BaseContext.html#getChannelType">getChannelType</a></li><li data-type='method'><a href="BaseContext.html#getLogger">getLogger</a></li><li data-type='method'><a href="BaseContext.html#getMessageModel">getMessageModel</a></li><li data-type='method'><a href="BaseContext.html#getRequest">getRequest</a></li><li data-type='method'><a href="BaseContext.html#getResponse">getResponse</a></li><li data-type='method'><a href="BaseContext.html#getVariable">getVariable</a></li><li data-type='method'><a href="BaseContext.html#logger">logger</a></li><li data-type='method'><a href="BaseContext.html#setVariable">setVariable</a></li><li data-type='method'><a href="BaseContext.html#translate">translate</a></li><li data-type='method'><a href="BaseContext.html#variable">variable</a></li></ul></li><li><a href="CustomComponentContext.html">CustomComponentContext</a><ul class='methods'><li data-type='method'><a href="CustomComponentContext.html#.sdkVersion">sdkVersion</a></li><li data-type='method'><a href="CustomComponentContext.html#attachment">attachment</a></li><li data-type='method'><a href="CustomComponentContext.html#botId">botId</a></li><li data-type='method'><a href="CustomComponentContext.html#channelId">channelId</a></li><li data-type='method'><a href="CustomComponentContext.html#channelType">channelType</a></li><li data-type='method'><a href="CustomComponentContext.html#constructMessagePayload">constructMessagePayload</a></li><li data-type='method'><a href="CustomComponentContext.html#error">error</a></li><li data-type='method'><a href="CustomComponentContext.html#getChannelType">getChannelType</a></li><li data-type='method'><a href="CustomComponentContext.html#getLogger">getLogger</a></li><li data-type='method'><a href="CustomComponentContext.html#getMessageModel">getMessageModel</a></li><li data-type='method'><a href="CustomComponentContext.html#getRequest">getRequest</a></li><li data-type='method'><a href="CustomComponentContext.html#getResponse">getResponse</a></li><li data-type='method'><a href="CustomComponentContext.html#getVariable">getVariable</a></li><li data-type='method'><a href="CustomComponentContext.html#invalidUserInput">invalidUserInput</a></li><li data-type='method'><a href="CustomComponentContext.html#keepTurn">keepTurn</a></li><li data-type='method'><a href="CustomComponentContext.html#location">location</a></li><li data-type='method'><a href="CustomComponentContext.html#logger">logger</a></li><li data-type='method'><a href="CustomComponentContext.html#MessageModel">MessageModel</a></li><li data-type='method'><a href="CustomComponentContext.html#messagePayload">messagePayload</a></li><li data-type='method'><a href="CustomComponentContext.html#nlpResult">nlpResult</a></li><li data-type='method'><a href="CustomComponentContext.html#platformVersion">platformVersion</a></li><li data-type='method'><a href="CustomComponentContext.html#postback">postback</a></li><li data-type='method'><a href="CustomComponentContext.html#properties">properties</a></li><li data-type='method'><a href="CustomComponentContext.html#rawPayload">rawPayload</a></li><li data-type='method'><a href="CustomComponentContext.html#releaseTurn">releaseTurn</a></li><li data-type='method'><a href="CustomComponentContext.html#reply">reply</a></li><li data-type='method'><a href="CustomComponentContext.html#request">request</a></li><li data-type='method'><a href="CustomComponentContext.html#sessionId">sessionId</a></li><li data-type='method'><a href="CustomComponentContext.html#setVariable">setVariable</a></li><li data-type='method'><a href="CustomComponentContext.html#text">text</a></li><li data-type='method'><a href="CustomComponentContext.html#transition">transition</a></li><li data-type='method'><a href="CustomComponentContext.html#translate">translate</a></li><li data-type='method'><a href="CustomComponentContext.html#userId">userId</a></li><li data-type='method'><a href="CustomComponentContext.html#variable">variable</a></li></ul></li><li><a href="EntityResolutionContext.html">EntityResolutionContext</a><ul class='methods'><li data-type='method'><a href="EntityResolutionContext.html#addCandidateMessages">addCandidateMessages</a></li><li data-type='method'><a href="EntityResolutionContext.html#addMessage">addMessage</a></li><li data-type='method'><a href="EntityResolutionContext.html#addValidationError">addValidationError</a></li><li data-type='method'><a href="EntityResolutionContext.html#cancel">cancel</a></li><li data-type='method'><a href="EntityResolutionContext.html#clearDisambiguationValues">clearDisambiguationValues</a></li><li data-type='method'><a href="EntityResolutionContext.html#clearItemValue">clearItemValue</a></li><li data-type='method'><a href="EntityResolutionContext.html#constructMessagePayload">constructMessagePayload</a></li><li data-type='method'><a href="EntityResolutionContext.html#getCandidateMessages">getCandidateMessages</a></li><li data-type='method'><a href="EntityResolutionContext.html#getChannelType">getChannelType</a></li><li data-type='method'><a href="EntityResolutionContext.html#getCurrentItem">getCurrentItem</a></li><li data-type='method'><a href="EntityResolutionContext.html#getCustomProperty">getCustomProperty</a></li><li data-type='method'><a href="EntityResolutionContext.html#getDisambiguationValues">getDisambiguationValues</a></li><li data-type='method'><a href="EntityResolutionContext.html#getDisplayValue">getDisplayValue</a></li><li data-type='method'><a href="EntityResolutionContext.html#getDisplayValues">getDisplayValues</a></li><li data-type='method'><a href="EntityResolutionContext.html#getEntity">getEntity</a></li><li data-type='method'><a href="EntityResolutionContext.html#getEntityItems">getEntityItems</a></li><li data-type='method'><a href="EntityResolutionContext.html#getEntityName">getEntityName</a></li><li data-type='method'><a href="EntityResolutionContext.html#getEnumValues">getEnumValues</a></li><li data-type='method'><a href="EntityResolutionContext.html#getItemsMatched">getItemsMatched</a></li><li data-type='method'><a href="EntityResolutionContext.html#getItemsMatchedOutOfOrder">getItemsMatchedOutOfOrder</a></li><li data-type='method'><a href="EntityResolutionContext.html#getItemsUpdated">getItemsUpdated</a></li><li data-type='method'><a href="EntityResolutionContext.html#getItemValue">getItemValue</a></li><li data-type='method'><a href="EntityResolutionContext.html#getLogger">getLogger</a></li><li data-type='method'><a href="EntityResolutionContext.html#getMessageModel">getMessageModel</a></li><li data-type='method'><a href="EntityResolutionContext.html#getMessages">getMessages</a></li><li data-type='method'><a href="EntityResolutionContext.html#getRequest">getRequest</a></li><li data-type='method'><a href="EntityResolutionContext.html#getResponse">getResponse</a></li><li data-type='method'><a href="EntityResolutionContext.html#getUserInput">getUserInput</a></li><li data-type='method'><a href="EntityResolutionContext.html#getValidationErrors">getValidationErrors</a></li><li data-type='method'><a href="EntityResolutionContext.html#getVariable">getVariable</a></li><li data-type='method'><a href="EntityResolutionContext.html#isFullEntityMatches">isFullEntityMatches</a></li><li data-type='method'><a href="EntityResolutionContext.html#isSkippedItem">isSkippedItem</a></li><li data-type='method'><a href="EntityResolutionContext.html#logger">logger</a></li><li data-type='method'><a href="EntityResolutionContext.html#setCustomProperty">setCustomProperty</a></li><li data-type='method'><a href="EntityResolutionContext.html#setDisambiguationValues">setDisambiguationValues</a></li><li data-type='method'><a href="EntityResolutionContext.html#setEntity">setEntity</a></li><li data-type='method'><a href="EntityResolutionContext.html#setItemValue">setItemValue</a></li><li data-type='method'><a href="EntityResolutionContext.html#setSystemEntityDisplayFunction">setSystemEntityDisplayFunction</a></li><li data-type='method'><a href="EntityResolutionContext.html#setSystemEntityDisplayProperties">setSystemEntityDisplayProperties</a></li><li data-type='method'><a href="EntityResolutionContext.html#setVariable">setVariable</a></li><li data-type='method'><a href="EntityResolutionContext.html#skipItem">skipItem</a></li><li data-type='method'><a href="EntityResolutionContext.html#translate">translate</a></li><li data-type='method'><a href="EntityResolutionContext.html#unskipItem">unskipItem</a></li><li data-type='method'><a href="EntityResolutionContext.html#variable">variable</a></li></ul></li><li><a href="MessageModel.html">MessageModel</a><ul class='methods'><li data-type='method'><a href="MessageModel.html#.addChannelExtensions">addChannelExtensions</a></li><li data-type='method'><a href="MessageModel.html#.addGlobalAction">addGlobalAction</a></li><li data-type='method'><a href="MessageModel.html#.addGlobalActions">addGlobalActions</a></li><li data-type='method'><a href="MessageModel.html#.attachmentConversationMessage">attachmentConversationMessage</a></li><li data-type='method'><a href="MessageModel.html#.callActionObject">callActionObject</a></li><li data-type='method'><a href="MessageModel.html#.cardConversationMessage">cardConversationMessage</a></li><li data-type='method'><a href="MessageModel.html#.cardObject">cardObject</a></li><li data-type='method'><a href="MessageModel.html#.locationActionObject">locationActionObject</a></li><li data-type='method'><a href="MessageModel.html#.locationConversationMessage">locationConversationMessage</a></li><li data-type='method'><a href="MessageModel.html#.postbackActionObject">postbackActionObject</a></li><li data-type='method'><a href="MessageModel.html#.postbackConversationMessage">postbackConversationMessage</a></li><li data-type='method'><a href="MessageModel.html#.postbackKeyword">postbackKeyword</a></li><li data-type='method'><a href="MessageModel.html#.rawConversationMessage">rawConversationMessage</a></li><li data-type='method'><a href="MessageModel.html#.shareActionObject">shareActionObject</a></li><li data-type='method'><a href="MessageModel.html#.textConversationMessage">textConversationMessage</a></li><li data-type='method'><a href="MessageModel.html#.urlActionObject">urlActionObject</a></li><li data-type='method'><a href="MessageModel.html#.validateConversationMessage">validateConversationMessage</a></li><li data-type='method'><a href="MessageModel.html#isValid">isValid</a></li><li data-type='method'><a href="MessageModel.html#messagePayload">messagePayload</a></li><li data-type='method'><a href="MessageModel.html#rawPayload">rawPayload</a></li><li data-type='method'><a href="MessageModel.html#validationError">validationError</a></li></ul></li><li><a href="module-Middleware.WebhookClient.html">WebhookClient</a><ul class='methods'><li data-type='method'><a href="module-Middleware.WebhookClient.html#MessageModel">MessageModel</a></li><li data-type='method'><a href="module-Middleware.WebhookClient.html#on">on</a></li><li data-type='method'><a href="module-Middleware.WebhookClient.html#receiver">receiver</a></li><li data-type='method'><a href="module-Middleware.WebhookClient.html#send">send</a></li></ul></li><li><a href="module-Testing.MockConversation.html">MockConversation</a><ul class='methods'><li data-type='method'><a href="module-Testing.MockConversation.html#.any">any</a></li><li data-type='method'><a href="module-Testing.MockConversation.html#.fromRequest">fromRequest</a></li><li data-type='method'><a href="module-Testing.MockConversation.html#getReplies">getReplies</a></li></ul></li><li><a href="NLPResult.html">NLPResult</a><ul class='methods'><li data-type='method'><a href="NLPResult.html#entityMatches">entityMatches</a></li><li data-type='method'><a href="NLPResult.html#fullEntityMatches">fullEntityMatches</a></li><li data-type='method'><a href="NLPResult.html#intentMatches">intentMatches</a></li><li data-type='method'><a href="NLPResult.html#topIntentMatch">topIntentMatch</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-CLI.html">CLI</a></li><li><a href="module-Config.html">Config</a><ul class='methods'><li data-type='method'><a href="module-Config.html">setLogger</a></li></ul></li><li><a href="module-Lib.html">Lib</a></li><li><a href="module-Middleware.html">Middleware</a><ul class='methods'><li data-type='method'><a href="module-Middleware.html#.customComponent">customComponent</a></li><li data-type='method'><a href="module-Middleware.html#.webhookReceiver">webhookReceiver</a></li></ul></li><li><a href="module-Testing.html">Testing</a><ul class='methods'><li data-type='method'><a href="module-Testing.html#.MockCompositeBagEntityVariable">MockCompositeBagEntityVariable</a></li><li data-type='method'><a href="module-Testing.html#.MockCompositeBagItem">MockCompositeBagItem</a></li><li data-type='method'><a href="module-Testing.html#.MockEventHandlerRequest">MockEventHandlerRequest</a></li><li data-type='method'><a href="module-Testing.html#.MockRequest">MockRequest</a></li><li data-type='method'><a href="module-Testing.html#.MockResolveEntitiesEvent">MockResolveEntitiesEvent</a></li></ul></li><li><a href="module-Util.html">Util</a></li><li><a href="module-Util_MessageModel.html">Util/MessageModel</a><ul class='methods'><li data-type='method'><a href="module-Util_MessageModel.html#.cardToText">cardToText</a></li><li data-type='method'><a href="module-Util_MessageModel.html#.convertRespToText">convertRespToText</a></li></ul></li><li><a href="module-Util_Text.html">Util/Text</a><ul class='methods'><li data-type='method'><a href="module-Util_Text.html#.approxTextMatch">approxTextMatch</a></li></ul></li><li><a href="module-Util_Webhook.html">Util/Webhook</a><ul class='methods'><li data-type='method'><a href="module-Util_Webhook.html#.bodyParserRawMessageVerify">bodyParserRawMessageVerify</a></li><li data-type='method'><a href="module-Util_Webhook.html#.buildSignatureHeader">buildSignatureHeader</a></li><li data-type='method'><a href="module-Util_Webhook.html#.messageToBot">messageToBot</a></li><li data-type='method'><a href="module-Util_Webhook.html#.messageToBotWithProperties">messageToBotWithProperties</a></li><li data-type='method'><a href="module-Util_Webhook.html#.verifyMessageFormat">verifyMessageFormat</a></li></ul></li></ul><h3>Externals</h3><ul><li><a href="external-ExpressApplication.html">ExpressApplication</a></li><li><a href="external-ExpressRequest.html">ExpressRequest</a></li><li><a href="external-ExpressResponse.html">ExpressResponse</a></li><li><a href="external-ExpressRouter.html">ExpressRouter</a></li></ul><h3>Global</h3><ul><li><a href="global.html#init">init</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">lib/component/sdk.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>'use strict';
+
+const { BaseContext } = require("./baseContext");
+const ComponentRequestSchemaFactory = require("./schema/componentRequestSchema");
+const { MessageModel } = require("../message/messageModel");
+
+// fix for MIECS-23476, we need to return "2.0" until all customers have migrated to 20.05 which
+// no longer checks whether version returned is a valid platform version
+// const sdkVersion = require('../../package.json').version;
+const sdkVersion = '2.0';
+
+// Response template
+const RESPONSE = {
+  platformVersion: undefined,
+  context: undefined,
+  action: undefined,
+  keepTurn: true,
+  transition: false,
+  error: false,
+  modifyContext: false
+};
+
+// Variable types supported by the dialog engine
+const CONST = {
+  NLPRESULT_TYPE: 'nlpresult',
+  SYSTEM_INVALID_USER_INPUT: 'system.invalidUserInput',
+};
+
+/**
+ * Wrapper object for accessing nlpresult
+ * @alias NLPResult
+ */
+const NLPResult = class {
+  constructor(nlpresult) {
+    this._nlpresult = nlpresult;
+  }
+
+  /**
+   * Returns matches for the specified entity; may be an empty collection.
+   * If no entity is specified, returns the map of all entities.
+   * @param {string} [entity] - name of the entity
+   * @return {object} The entity match result.
+   */
+  entityMatches(entity) {
+    if (!this._nlpresult) {
+      return entity === undefined ? {} : [];
+    }
+
+    if (entity === undefined) {
+      // Retrieving entityMatches collection, or an empty collection if none
+      return this._nlpresult.entityMatches ? this._nlpresult.entityMatches : {};
+    } else {
+      if (this._nlpresult.entityMatches) {
+        return this._nlpresult.entityMatches[entity] ? this._nlpresult.entityMatches[entity] : [];
+      } else {
+        return [];
+      }
+    }
+  }
+
+  /**
+   * Returns full payload matches for the specified entity; may be an empty collection.
+   * If no entity is specified, returns the full payload map of all entities.
+   * @param {string} [entity] - name of the entity
+   * @return {object} The full entity match result.
+   */
+  fullEntityMatches(entity) {
+    if (!this._nlpresult) {
+      return entity === undefined ? {} : [];
+    }
+
+    if (entity === undefined) {
+      // Retrieving fullEntityMatches collection, or an empty collection if none
+      return this._nlpresult.fullEntityMatches ? this._nlpresult.fullEntityMatches : {};
+    } else {
+      if (this._nlpresult.fullEntityMatches) {
+        return this._nlpresult.fullEntityMatches[entity] ? this._nlpresult.fullEntityMatches[entity] : [];
+      } else {
+        return [];
+      }
+    }
+  }
+
+  /**
+   * Returns intent matches if any.
+   * Intent matches are returned in descending order of score,
+   * @return {object[]} The intent match results, each match with properties score and intent.
+   */
+  intentMatches() {
+    if (!this._nlpresult) {
+      return [];
+    }
+    if (this._nlpresult.intentMatches &amp;&amp; Array.isArray(this._nlpresult.intentMatches.summary) &amp;&amp; this._nlpresult.intentMatches.summary.length > 0) {
+      return this._nlpresult.intentMatches.summary;
+    } else {
+      return null;
+    }
+  }
+
+  /**
+   * Returns top intent match (with highest score), if any.
+   * @return {object} The top intent match (with properties score and intent)
+   */
+  topIntentMatch() {
+    var intentMatches = this.intentMatches();
+    return (intentMatches &amp;&amp; intentMatches.length > 0 ? intentMatches[0] : {});
+  }
+
+  query() {
+    return (this._nlpresult ? this._nlpresult.query : "");
+  }
+
+}
+
+/**
+ * The Bots Node SDK uses this class to receive bot requests, which is provided
+ * to the custom component invocation.
+ * &lt;p>
+ * It offers a comprehensive interface to reading context for the invocation
+ * as well as changing variables and sending results back to the dialog engine.
+ * &lt;/p>
+ * @memberof module:Lib
+ * @extends BaseContext
+ * @alias CustomComponentContext
+ * @example &lt;caption>Context object used to invoke Custom Component&lt;/caption>
+ * 
+ * const MyCustomComponent = {
+ *   metadata: () => ({name: 'hello'}),
+ *   invoke: async (context) => {
+ *     // use conversation instance methods to respond, set variables, etc.
+ *     context.reply('Hello!');
+ *     context.transition();
+ *   }
+ * }
+ */
+class CustomComponentContext extends BaseContext {
+  /**
+   * @param {object} request - The request body
+   */
+  constructor(request) {
+    // Initilize the response, filling in platformVersion, context/vars
+    // from the incoming request as needed.
+    const response = Object.assign({}, RESPONSE, { platformVersion: request.platformVersion });
+    super(request, response, ComponentRequestSchemaFactory);
+
+    // Reset system.invalidUserInput variable if set to true.  Requested by runtime to do this in sdk
+    this._resetInvalidUserInput();
+  }
+
+  /**
+   * Retrieves the request body.
+   * @return {object} The request body.
+   */
+  request() {
+    return super.getRequest();
+  }
+
+  /**
+   * Retrieves the bot id.
+   * @return {string} The bot id.
+   */
+  botId() {
+    return this.request().botId;
+  }
+
+  /**
+   * Retrieves the sdk version.
+   * @return {string} The sdk version.
+   */
+  static sdkVersion() {
+    return sdkVersion;
+  }
+
+  /**
+   * Retrieves the platform version of the request.
+   * @return {string} The platform version.
+   */
+  platformVersion() {
+    return this.request().platformVersion;
+  }
+
+  /**
+   * Retrieves the raw payload of the current input message.
+   * @return {object} The raw payload.
+   */
+  rawPayload() {
+    return this.request().message.payload;
+  }
+
+  /**
+   * Retrieves the payload of the current input message in the common message format.
+   * @return {object} The common message payload.
+   */
+  messagePayload() {
+    return this.request().message.messagePayload;
+  }
+
+  /**  
+   * Retrieves the payload of the current input message. For backward compatibility purposes.  
+   * However, the payload returned may be in the new message format.
+   * @return {object} The message payload.
+   * @deprecated to be removed in favor of rawPayload() and messagePayload()
+   * @private
+   */
+  payload() {
+    this.logger().warn("conversation SDK payload() is deprecated in favor of messagePayload()"); 
+    return this.rawPayload();
+  }
+
+  /**
+   * Retrieves the channel type of the current input message.
+   * @return {string} The channel type - facebook, webhook, test, etc.
+   */
+  channelType() {
+    return this.request().message.channelConversation.type;
+  }
+
+  /**
+   * Retrieves the channel Id of the current input message.
+   * @return {string} The channel id.
+   */
+  channelId() {
+    return this.request().message.channelConversation.channelId;
+  }
+
+
+  /**
+   * Retrieves the userId for the current input message.
+   * @return {string} The userId.
+   */
+  userId() {
+    return this.request().message.channelConversation.userId;
+  }
+
+  /**
+   * Retrieves the sessionId for the current input message.
+   * @return {string} The sessionId.
+   */
+  sessionId() {
+    return this.request().message.channelConversation.sessionId;
+  }
+
+  // retrieve v1.0 facebook postback
+  _postback10() {
+    const rawPayload = this.rawPayload();
+    if (rawPayload &amp;&amp; this.channelType() === 'facebook') {
+      if (rawPayload.hasOwnProperty('postback') &amp;&amp; rawPayload.postback.hasOwnProperty('payload')) {
+        return rawPayload.postback.payload;
+      }
+    }
+    return null;
+  }
+
+  /**
+   * Retrieves the postback of the current input message.
+   * If the input message is not a postback, this will return null.
+   * @return {object} The postback payload.
+   */
+  postback() {
+    let postback = null;
+
+    const messagePayload = this.messagePayload();
+    if (messagePayload &amp;&amp; messagePayload.postback) {
+      postback = messagePayload.postback;
+    }
+    if (!postback) {
+      postback = this._postback10();
+    }
+    return postback;
+  }
+
+  // return v1.0 facebook text and quick_reply text
+  _text10() {
+    const rawPayload = this.rawPayload();
+    if (rawPayload &amp;&amp; this.channelType() === 'facebook') {
+      if (rawPayload.hasOwnProperty('message')) {
+        if (rawPayload.message.hasOwnProperty('quick_reply') &amp;&amp; rawPayload.message.quick_reply.hasOwnProperty('payload')) {
+          return rawPayload.message.quick_reply.payload;
+        } else if (rawPayload.message.hasOwnProperty('text')) {
+          return rawPayload.message.text;
+        }
+      }
+    }
+    return null;
+  }
+
+  /**
+   * Retrieves the text of the current input message.
+   * Eventually not all messages will have a text value, in which case
+   * this will return null.
+   * @return {string} The text of the input message.
+   */
+  text() {
+    let text = null;
+
+    const messagePayload = this.messagePayload();
+    if (messagePayload) {
+      if (messagePayload.text) {
+        text = messagePayload.text;
+      } else {
+        const postback = this.postback();
+        if (postback &amp;&amp; typeof postback === 'string') {
+          text = postback;
+        }
+      }
+    }
+    if (!text) {
+      text = this._text10();
+    }
+    return text;
+  }
+
+  /**
+   * Retrieves the attachment of the current input message.
+   * If the input message is not an attachment, this will return null.
+   * @return {object} The attachment.
+   */
+  attachment() {
+    let attachment = null;
+
+    const messagePayload = this.messagePayload();
+    if (messagePayload &amp;&amp; messagePayload.attachment) {
+      attachment = messagePayload.attachment;
+    }
+    return attachment;
+  }
+
+  /**
+   * Retrieves the location of the current input message.
+   * If the input message does not contain a location, this will return null.
+   * @return {object} The location.
+   */
+  location() {
+    let location = null;
+
+    const messagePayload = this.messagePayload();
+    if (messagePayload &amp;&amp; messagePayload.location) {
+      location = messagePayload.location;
+    }
+    return location;
+  }
+
+  /**
+   * Retrieves the properties defined for the current state.
+   * @return {object} The properties
+   */
+  properties() {
+    return this.request().properties || {};
+  }
+
+  /**
+   * Returns the MessageModel class for creating or validating messages to or from bots.
+   *
+   * @return {MessageModel} The MessageModel class
+   */
+  MessageModel() {
+    return super.getMessageModel();
+  }
+
+
+  /**
+   * Returns an NLPResult helper object for working with nlpresult variables.
+   * See the NLPResult documentation for more information.
+   * &lt;p>
+   * You may specify a particular nlpresult by name (if you have multiple
+   * nlpresult variables defined in the flow), or omit the name if you
+   * only have 1 nlpresult.
+   * &lt;/p>
+   *
+   * @param {string} [nlpVariableName] - variable to be given the nlpResult
+   * @return {NLPResult} The nlp resolution result.
+   */
+  nlpResult(nlpVariableName) {
+    if (nlpVariableName === undefined) {
+      for (let name in this.response().context.variables) {
+        if (this.response().context.variables[name].type === CONST.NLPRESULT_TYPE) {
+          this.logger().debug('SDK: using implicitly found nlpresult=' + name);
+          nlpVariableName = name;
+          break;
+        }
+      }
+      if (nlpVariableName === undefined) {
+        throw new Error('SDK: no nlpresult variable present');
+      }
+    }
+
+    const nlpVariable = this.variable(nlpVariableName);
+
+    if (nlpVariable === undefined) {
+      throw new Error('SDK: undefined var=' + nlpVariableName);
+    }
+
+    if (this.response().context.variables[nlpVariableName].type !== CONST.NLPRESULT_TYPE) {
+      throw new Error('SDK: var=' + nlpVariableName + ' not of type nlpresult');
+    }
+
+    return new NLPResult(nlpVariable);
+  }
+
+  /**  
+   * Sets the action to return from this component, which will determine the
+   * next state in the dialog.
+   *
+   * @param {string} a - action name
+   * @deprecated to be removed in favor of transition(action)
+   * @private
+   */
+  action(a) {
+    this.logger().warn("conversation SDK action() is deprecated in favor of transition(action)"); 
+    if (a === undefined) {
+      return this.response().action;
+    }
+
+    this.response().action = a;
+    return this;
+  }
+
+  /**
+     * Call this method if the input is not understood, and this would allow the bots runtime to 
+     * handle the issue.  The bots runtime may just display the message to the user and execute the same component again, or
+     * it may try to interpret the input and process differently.
+     * @param {object|string|MessageModel} [r] - optional payload to be sent to user.  payload could also be a string for text response
+     */
+  invalidUserInput(r) {
+    this.variable(CONST.SYSTEM_INVALID_USER_INPUT, true);
+    this.reply(r||'Input not understood.  Please try again');
+    return this;
+  }
+
+  _resetInvalidUserInput() {
+    if (this.variable(CONST.SYSTEM_INVALID_USER_INPUT) === true) {
+      this.variable(CONST.SYSTEM_INVALID_USER_INPUT, false);
+    }
+  }
+  
+  /** 
+   * Set "exit" to true when your component has replies it wants to send to
+   * the client.
+   * &lt;p>
+   * The SDK's "reply" function automatically sets "exit" to true, but
+   * if you manually modify the response to send replies then you will need
+   * to set this explicitly.
+   * &lt;/p>
+   * @private
+   * @deprecated to be removed in favor of keepTurn(boolean)
+   */
+  exit(e) {
+    this.logger().warn("conversation SDK exit() is deprecated in favor of keepTurn(boolean)"); 
+    this.response().keepTurn = !e;
+    return this;
+  }
+
+  /**
+   * "keepTurn" is used to indicate if the Bot/component should send the next replies, or
+   * or if the Bot/component should wait for user input (keepTurn = false).
+   * &lt;p>
+   * The SDK's "reply" function automatically sets "keepTurn" to false.
+   * &lt;/p>
+   * @param {boolean} [k] - whether to keep the turn for sending more replies
+   */
+  keepTurn(k) {
+    this.response().keepTurn = (typeof k === "undefined" ? true : !!k);
+    return this;
+  }
+
+  /**
+   * "releaseTurn" is the shorthand for keepTurn(false)
+   * @param {boolean} [k] - whether to keep the turn for sending more replies
+   */
+  releaseTurn(k) {
+    this.response().keepTurn = (typeof k === "undefined" ? false : !k);
+    return this;
+  }
+
+  /**  
+   * Set "done" to true when your component has completed its logic and
+   * the dialog should transition to the next state.
+   * &lt;p>
+   * This is only meaningful when you are sending replies (ie you have also
+   * set "exit" to true).  If you are not sending replies ("exit" is false,
+   * the default) then "done" is ignored; the dialog always moves to the next
+   * state.
+   * &lt;/p>
+   * If "exit" is true (replies are being sent), then leaving "done" as false
+   * (the default) means the dialog will stay in this state after sending
+   * the replies, and subsequent user input will come back to this component.
+   * This allows a component to handle a series of interactions within itself,
+   * however the component is responsible for keeping track of its own state
+   * in such situations.
+   * &lt;p>
+   * Setting "done" to true will transition to the next state/component after
+   * sending the replies.
+   * &lt;/p>
+   * @private
+   * @deprecated to be removed in favor of transition()
+   */
+  done(d) {
+    this.logger().warn("conversation SDK done() is deprecated in favor of transition()"); 
+    this.response().transition = !!d;
+    return this;
+  }
+
+  /**
+   * Call &lt;code>transition()&lt;/code> when your component has completed its logic and
+   * the dialog should transition to the next state, after replies (if any) are sent.
+   * &lt;p>
+   * If &lt;code>transition()&lt;/code> is not called, the dialog will stay in this state after sending
+   * the replies (if any), and subsequent user input will come back to this component.
+   * This allows a component to handle a series of interactions within itself,
+   * however the component is responsible for keeping track of its own state
+   * in such situations.
+   * &lt;/p>
+   * &lt;code>transition()&lt;/code> will cause the dialog to transition to the next state.
+   * transition(outcome) will set te outcome of the component that would be used to
+   * determine the next state to transition to.
+   * @param {string} [t] - outcome of component
+   */
+  transition(t) {
+    this.response().transition = true;
+    if (typeof t !== 'undefined') {
+      this.response().action = t;
+    }
+    return this;
+  }
+
+  /**
+   * Sets the error flag on the response.
+   * @param {boolean} e - sets error if true
+   */
+  error(e) {
+    this.response().error = !!e;
+    return this;
+  }
+
+  /**
+   * Adds a reply to be sent back to the user.  May be called multiple times
+   * to send multiple replies in a given response.  Automatically sets the
+   * &lt;code>keepTurn&lt;/code> as false.
+   * &lt;p>
+   * &lt;code>reply&lt;/code> can take a string payload, an object payload or a MessageModel payload.  A string or object payload will be parsed
+   * into a MessageModel payload.  If the MessageModel payload has a valid common message format, then reply will use it as
+   * messagePayload, else it will use the payload to create a rawConversationMessage (see MessageModel) as messagePayload.
+   * &lt;/p>
+   * @param {object|string|MessageModel} payload - payload to be sent back.  payload could also be a string for text response
+   * @param {object} [channelConversation] - to override the default channelConversation from request
+   */
+  reply(payload, channelConversation) {
+    var response = {
+      tenantId: this.request().message.tenantId,
+      channelConversation: channelConversation || Object.assign({}, this.request().message.channelConversation)
+    };
+    var messagePayload =  super.constructMessagePayload(payload);
+    if (messagePayload) {
+      response.messagePayload = messagePayload;
+    } else {
+      // is invalid raw message payload, keep for backwards compatibility
+      var rawMessagePayload = MessageModel.rawConversationMessage(payload);
+      var messageModel = new MessageModel(rawMessagePayload);
+      response.payload = messageModel.rawPayload();  
+    }
+
+    this.response().messages = this.response().messages || [];
+    this.response().messages.push(response);
+
+    // "keepTurn" false which signals to the engine to send replies and wait for user input
+    this.keepTurn(false);
+
+    return this;
+  }
+
+
+  // The HTTP response body
+  response() {
+    return super.getResponse();
+  }
+
+  // BUGBUG: workaround for https://jira.oraclecorp.com/jira/browse/MIECS-2748
+  resolveVariable(variable) {
+    return variable.startsWith('${') ? null : variable;
+  }
+
+  /** 
+   * When expecting an out of band conversation continuation, such as a
+   * user following the OAuth flow, completing a form and hitting submit, or
+   * a human support agent or other third party sending a message, issue a
+   * limited use token to allow calling back into Bots via the generic callback
+   * endpoint.
+   * The provided token should be a UUID or other unique and random number.  By setting it
+   * here in the response the Bot will await a reply with that token and use it to
+   * thread the message back into the current conversation with that user.
+   * @param {string} callbackToken - token generated by you to allow reauthentication back 
+   * into this conversation.  Should be unique, like userId + random.  It is ok to reissue 
+   * the same token for the same conversation.
+   * @private
+   */
+  setCallbackToken(callbackToken) {
+    this.response().callbackToken = (typeof callbackToken === "undefined" ? null : callbackToken);
+    return this;
+  }
+}
+
+module.exports = {
+  CustomComponentContext,
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

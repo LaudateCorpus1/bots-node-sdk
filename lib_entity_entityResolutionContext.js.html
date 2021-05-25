@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>lib/entity/entityResolutionContext.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="BaseContext.html">BaseContext</a><ul class='methods'><li data-type='method'><a href="BaseContext.html#constructMessagePayload">constructMessagePayload</a></li><li data-type='method'><a href="BaseContext.html#getChannelType">getChannelType</a></li><li data-type='method'><a href="BaseContext.html#getLogger">getLogger</a></li><li data-type='method'><a href="BaseContext.html#getMessageModel">getMessageModel</a></li><li data-type='method'><a href="BaseContext.html#getRequest">getRequest</a></li><li data-type='method'><a href="BaseContext.html#getResponse">getResponse</a></li><li data-type='method'><a href="BaseContext.html#getVariable">getVariable</a></li><li data-type='method'><a href="BaseContext.html#logger">logger</a></li><li data-type='method'><a href="BaseContext.html#setVariable">setVariable</a></li><li data-type='method'><a href="BaseContext.html#translate">translate</a></li><li data-type='method'><a href="BaseContext.html#variable">variable</a></li></ul></li><li><a href="CustomComponentContext.html">CustomComponentContext</a><ul class='methods'><li data-type='method'><a href="CustomComponentContext.html#.sdkVersion">sdkVersion</a></li><li data-type='method'><a href="CustomComponentContext.html#attachment">attachment</a></li><li data-type='method'><a href="CustomComponentContext.html#botId">botId</a></li><li data-type='method'><a href="CustomComponentContext.html#channelId">channelId</a></li><li data-type='method'><a href="CustomComponentContext.html#channelType">channelType</a></li><li data-type='method'><a href="CustomComponentContext.html#constructMessagePayload">constructMessagePayload</a></li><li data-type='method'><a href="CustomComponentContext.html#error">error</a></li><li data-type='method'><a href="CustomComponentContext.html#getChannelType">getChannelType</a></li><li data-type='method'><a href="CustomComponentContext.html#getLogger">getLogger</a></li><li data-type='method'><a href="CustomComponentContext.html#getMessageModel">getMessageModel</a></li><li data-type='method'><a href="CustomComponentContext.html#getRequest">getRequest</a></li><li data-type='method'><a href="CustomComponentContext.html#getResponse">getResponse</a></li><li data-type='method'><a href="CustomComponentContext.html#getVariable">getVariable</a></li><li data-type='method'><a href="CustomComponentContext.html#invalidUserInput">invalidUserInput</a></li><li data-type='method'><a href="CustomComponentContext.html#keepTurn">keepTurn</a></li><li data-type='method'><a href="CustomComponentContext.html#location">location</a></li><li data-type='method'><a href="CustomComponentContext.html#logger">logger</a></li><li data-type='method'><a href="CustomComponentContext.html#MessageModel">MessageModel</a></li><li data-type='method'><a href="CustomComponentContext.html#messagePayload">messagePayload</a></li><li data-type='method'><a href="CustomComponentContext.html#nlpResult">nlpResult</a></li><li data-type='method'><a href="CustomComponentContext.html#platformVersion">platformVersion</a></li><li data-type='method'><a href="CustomComponentContext.html#postback">postback</a></li><li data-type='method'><a href="CustomComponentContext.html#properties">properties</a></li><li data-type='method'><a href="CustomComponentContext.html#rawPayload">rawPayload</a></li><li data-type='method'><a href="CustomComponentContext.html#releaseTurn">releaseTurn</a></li><li data-type='method'><a href="CustomComponentContext.html#reply">reply</a></li><li data-type='method'><a href="CustomComponentContext.html#request">request</a></li><li data-type='method'><a href="CustomComponentContext.html#sessionId">sessionId</a></li><li data-type='method'><a href="CustomComponentContext.html#setVariable">setVariable</a></li><li data-type='method'><a href="CustomComponentContext.html#text">text</a></li><li data-type='method'><a href="CustomComponentContext.html#transition">transition</a></li><li data-type='method'><a href="CustomComponentContext.html#translate">translate</a></li><li data-type='method'><a href="CustomComponentContext.html#userId">userId</a></li><li data-type='method'><a href="CustomComponentContext.html#variable">variable</a></li></ul></li><li><a href="EntityResolutionContext.html">EntityResolutionContext</a><ul class='methods'><li data-type='method'><a href="EntityResolutionContext.html#addCandidateMessages">addCandidateMessages</a></li><li data-type='method'><a href="EntityResolutionContext.html#addMessage">addMessage</a></li><li data-type='method'><a href="EntityResolutionContext.html#addValidationError">addValidationError</a></li><li data-type='method'><a href="EntityResolutionContext.html#cancel">cancel</a></li><li data-type='method'><a href="EntityResolutionContext.html#clearDisambiguationValues">clearDisambiguationValues</a></li><li data-type='method'><a href="EntityResolutionContext.html#clearItemValue">clearItemValue</a></li><li data-type='method'><a href="EntityResolutionContext.html#constructMessagePayload">constructMessagePayload</a></li><li data-type='method'><a href="EntityResolutionContext.html#getCandidateMessages">getCandidateMessages</a></li><li data-type='method'><a href="EntityResolutionContext.html#getChannelType">getChannelType</a></li><li data-type='method'><a href="EntityResolutionContext.html#getCurrentItem">getCurrentItem</a></li><li data-type='method'><a href="EntityResolutionContext.html#getCustomProperty">getCustomProperty</a></li><li data-type='method'><a href="EntityResolutionContext.html#getDisambiguationValues">getDisambiguationValues</a></li><li data-type='method'><a href="EntityResolutionContext.html#getDisplayValue">getDisplayValue</a></li><li data-type='method'><a href="EntityResolutionContext.html#getDisplayValues">getDisplayValues</a></li><li data-type='method'><a href="EntityResolutionContext.html#getEntity">getEntity</a></li><li data-type='method'><a href="EntityResolutionContext.html#getEntityItems">getEntityItems</a></li><li data-type='method'><a href="EntityResolutionContext.html#getEntityName">getEntityName</a></li><li data-type='method'><a href="EntityResolutionContext.html#getEnumValues">getEnumValues</a></li><li data-type='method'><a href="EntityResolutionContext.html#getItemsMatched">getItemsMatched</a></li><li data-type='method'><a href="EntityResolutionContext.html#getItemsMatchedOutOfOrder">getItemsMatchedOutOfOrder</a></li><li data-type='method'><a href="EntityResolutionContext.html#getItemsUpdated">getItemsUpdated</a></li><li data-type='method'><a href="EntityResolutionContext.html#getItemValue">getItemValue</a></li><li data-type='method'><a href="EntityResolutionContext.html#getLogger">getLogger</a></li><li data-type='method'><a href="EntityResolutionContext.html#getMessageModel">getMessageModel</a></li><li data-type='method'><a href="EntityResolutionContext.html#getMessages">getMessages</a></li><li data-type='method'><a href="EntityResolutionContext.html#getRequest">getRequest</a></li><li data-type='method'><a href="EntityResolutionContext.html#getResponse">getResponse</a></li><li data-type='method'><a href="EntityResolutionContext.html#getUserInput">getUserInput</a></li><li data-type='method'><a href="EntityResolutionContext.html#getValidationErrors">getValidationErrors</a></li><li data-type='method'><a href="EntityResolutionContext.html#getVariable">getVariable</a></li><li data-type='method'><a href="EntityResolutionContext.html#isFullEntityMatches">isFullEntityMatches</a></li><li data-type='method'><a href="EntityResolutionContext.html#isSkippedItem">isSkippedItem</a></li><li data-type='method'><a href="EntityResolutionContext.html#logger">logger</a></li><li data-type='method'><a href="EntityResolutionContext.html#setCustomProperty">setCustomProperty</a></li><li data-type='method'><a href="EntityResolutionContext.html#setDisambiguationValues">setDisambiguationValues</a></li><li data-type='method'><a href="EntityResolutionContext.html#setEntity">setEntity</a></li><li data-type='method'><a href="EntityResolutionContext.html#setItemValue">setItemValue</a></li><li data-type='method'><a href="EntityResolutionContext.html#setSystemEntityDisplayFunction">setSystemEntityDisplayFunction</a></li><li data-type='method'><a href="EntityResolutionContext.html#setSystemEntityDisplayProperties">setSystemEntityDisplayProperties</a></li><li data-type='method'><a href="EntityResolutionContext.html#setVariable">setVariable</a></li><li data-type='method'><a href="EntityResolutionContext.html#skipItem">skipItem</a></li><li data-type='method'><a href="EntityResolutionContext.html#translate">translate</a></li><li data-type='method'><a href="EntityResolutionContext.html#unskipItem">unskipItem</a></li><li data-type='method'><a href="EntityResolutionContext.html#variable">variable</a></li></ul></li><li><a href="MessageModel.html">MessageModel</a><ul class='methods'><li data-type='method'><a href="MessageModel.html#.addChannelExtensions">addChannelExtensions</a></li><li data-type='method'><a href="MessageModel.html#.addGlobalAction">addGlobalAction</a></li><li data-type='method'><a href="MessageModel.html#.addGlobalActions">addGlobalActions</a></li><li data-type='method'><a href="MessageModel.html#.attachmentConversationMessage">attachmentConversationMessage</a></li><li data-type='method'><a href="MessageModel.html#.callActionObject">callActionObject</a></li><li data-type='method'><a href="MessageModel.html#.cardConversationMessage">cardConversationMessage</a></li><li data-type='method'><a href="MessageModel.html#.cardObject">cardObject</a></li><li data-type='method'><a href="MessageModel.html#.locationActionObject">locationActionObject</a></li><li data-type='method'><a href="MessageModel.html#.locationConversationMessage">locationConversationMessage</a></li><li data-type='method'><a href="MessageModel.html#.postbackActionObject">postbackActionObject</a></li><li data-type='method'><a href="MessageModel.html#.postbackConversationMessage">postbackConversationMessage</a></li><li data-type='method'><a href="MessageModel.html#.postbackKeyword">postbackKeyword</a></li><li data-type='method'><a href="MessageModel.html#.rawConversationMessage">rawConversationMessage</a></li><li data-type='method'><a href="MessageModel.html#.shareActionObject">shareActionObject</a></li><li data-type='method'><a href="MessageModel.html#.textConversationMessage">textConversationMessage</a></li><li data-type='method'><a href="MessageModel.html#.urlActionObject">urlActionObject</a></li><li data-type='method'><a href="MessageModel.html#.validateConversationMessage">validateConversationMessage</a></li><li data-type='method'><a href="MessageModel.html#isValid">isValid</a></li><li data-type='method'><a href="MessageModel.html#messagePayload">messagePayload</a></li><li data-type='method'><a href="MessageModel.html#rawPayload">rawPayload</a></li><li data-type='method'><a href="MessageModel.html#validationError">validationError</a></li></ul></li><li><a href="module-Middleware.WebhookClient.html">WebhookClient</a><ul class='methods'><li data-type='method'><a href="module-Middleware.WebhookClient.html#MessageModel">MessageModel</a></li><li data-type='method'><a href="module-Middleware.WebhookClient.html#on">on</a></li><li data-type='method'><a href="module-Middleware.WebhookClient.html#receiver">receiver</a></li><li data-type='method'><a href="module-Middleware.WebhookClient.html#send">send</a></li></ul></li><li><a href="module-Testing.MockConversation.html">MockConversation</a><ul class='methods'><li data-type='method'><a href="module-Testing.MockConversation.html#.any">any</a></li><li data-type='method'><a href="module-Testing.MockConversation.html#.fromRequest">fromRequest</a></li><li data-type='method'><a href="module-Testing.MockConversation.html#getReplies">getReplies</a></li></ul></li><li><a href="NLPResult.html">NLPResult</a><ul class='methods'><li data-type='method'><a href="NLPResult.html#entityMatches">entityMatches</a></li><li data-type='method'><a href="NLPResult.html#fullEntityMatches">fullEntityMatches</a></li><li data-type='method'><a href="NLPResult.html#intentMatches">intentMatches</a></li><li data-type='method'><a href="NLPResult.html#topIntentMatch">topIntentMatch</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-CLI.html">CLI</a></li><li><a href="module-Config.html">Config</a><ul class='methods'><li data-type='method'><a href="module-Config.html">setLogger</a></li></ul></li><li><a href="module-Lib.html">Lib</a></li><li><a href="module-Middleware.html">Middleware</a><ul class='methods'><li data-type='method'><a href="module-Middleware.html#.customComponent">customComponent</a></li><li data-type='method'><a href="module-Middleware.html#.webhookReceiver">webhookReceiver</a></li></ul></li><li><a href="module-Testing.html">Testing</a><ul class='methods'><li data-type='method'><a href="module-Testing.html#.MockCompositeBagEntityVariable">MockCompositeBagEntityVariable</a></li><li data-type='method'><a href="module-Testing.html#.MockCompositeBagItem">MockCompositeBagItem</a></li><li data-type='method'><a href="module-Testing.html#.MockEventHandlerRequest">MockEventHandlerRequest</a></li><li data-type='method'><a href="module-Testing.html#.MockRequest">MockRequest</a></li><li data-type='method'><a href="module-Testing.html#.MockResolveEntitiesEvent">MockResolveEntitiesEvent</a></li></ul></li><li><a href="module-Util.html">Util</a></li><li><a href="module-Util_MessageModel.html">Util/MessageModel</a><ul class='methods'><li data-type='method'><a href="module-Util_MessageModel.html#.cardToText">cardToText</a></li><li data-type='method'><a href="module-Util_MessageModel.html#.convertRespToText">convertRespToText</a></li></ul></li><li><a href="module-Util_Text.html">Util/Text</a><ul class='methods'><li data-type='method'><a href="module-Util_Text.html#.approxTextMatch">approxTextMatch</a></li></ul></li><li><a href="module-Util_Webhook.html">Util/Webhook</a><ul class='methods'><li data-type='method'><a href="module-Util_Webhook.html#.bodyParserRawMessageVerify">bodyParserRawMessageVerify</a></li><li data-type='method'><a href="module-Util_Webhook.html#.buildSignatureHeader">buildSignatureHeader</a></li><li data-type='method'><a href="module-Util_Webhook.html#.messageToBot">messageToBot</a></li><li data-type='method'><a href="module-Util_Webhook.html#.messageToBotWithProperties">messageToBotWithProperties</a></li><li data-type='method'><a href="module-Util_Webhook.html#.verifyMessageFormat">verifyMessageFormat</a></li></ul></li></ul><h3>Externals</h3><ul><li><a href="external-ExpressApplication.html">ExpressApplication</a></li><li><a href="external-ExpressRequest.html">ExpressRequest</a></li><li><a href="external-ExpressResponse.html">ExpressResponse</a></li><li><a href="external-ExpressRouter.html">ExpressRouter</a></li></ul><h3>Global</h3><ul><li><a href="global.html#init">init</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">lib/entity/entityResolutionContext.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>'use strict';
+
+const { BaseContext } = require("../component/baseContext");
+const EventHandlerRequestSchemaFactory = require("./schema/eventHandlerRequestSchema");
+
+// Response template
+const RESPONSE = {
+  context: undefined,
+  error: false,
+  validationResults: {},
+  keepProcessing: true,
+  cancel: false,
+  modifyContext: false
+};
+
+/**
+ * The Bots EntityResolutionContext is a class for querying, validating and changing a composite bag entity and its
+ * entity resolution status. 
+ * &lt;/p>
+ * An EntityResolutionContext class instance is passed as an argument to every event handler function.
+ * @memberof module:Lib
+ * @extends BaseContext
+ * @alias EntityResolutionContext
+ */
+class EntityResolutionContext extends BaseContext {
+
+  /**
+   * Constructor of entity resolution context. 
+   * DO NOT USE - INSTANCE IS ALREADY PASSED TO EVENT HANDLERS 
+   * @param {object} request 
+   */
+  constructor(request) {
+    // Initilize the response
+    const response = Object.assign({}, RESPONSE, {
+      entityResolutionStatus: request.entityResolutionStatus,
+    });
+    super(request, response, EventHandlerRequestSchemaFactory);
+    this._entityStatus = response.entityResolutionStatus;
+    this._entity = this.getVariable(request.variableName);
+    // Initialize display properties
+    this._initSystemEntityDisplayProperties();
+
+  }
+
+  /**
+   * Returns the value of the composite bag entity currently being resolved
+   * @return {object} The JSON object holding the composite bag item values
+   */
+  getEntity() {
+    return this._entity;
+  }
+
+
+  /**
+   * Sets the value of the composite bag entity currently being resolved
+   * @param {object} newEntity - The JSON object holding the composite bag item values
+   */
+  setEntity(newEntity) {
+    this._entity = newEntity;
+    delete this._entityStatus.resolvingField;
+    this.setVariable(this.getRequest().variableName,this._entity);
+    this._clearShouldPromptCache();
+  }
+
+  /**
+   * Returns the name of the composite bag entity type currently being resolved
+   * @return {string} name of the composite bag entity type
+   */
+  getEntityName() {
+    let variable =  this.getRequest().context.variables[this.getRequest().variableName];
+    return variable.type.name;
+  }
+
+  /**
+   * Returns list of composite bag item definitions
+   * @return {object[]} list of composite bag item definitions
+   */ 
+  getEntityItems() {
+    let cbvar = this.getRequest().variableName;
+    return this.getRequest().context.variables[cbvar].type.compositeBagItems;
+  }
+
+  /**
+   * Return value of a composite bag item in the composite bag entity currentyly being resolved
+   * @return {object} value of the composite bag item
+   * @param {string} name - the name of the composite bag item for which the value is returned
+   */
+  getItemValue(name) {
+    return this._entity ? this._entity[name] : undefined;
+  }
+
+  /**
+   * Set value of a composite bag item in the composite bag entity currentyly being resolved
+   * @param {string} name - the name of the composite bag item for which the value is set
+   * @param {object} value - value of the composite bag item
+   */
+  setItemValue(name, value) {
+    if (!this._entity) {      
+      this._entity = {"entityName": this.getEntityName()}
+      this.setVariable(this.getRequest().variableName,this._entity);
+    }
+    this._entity[name] = value;
+    this._clearShouldPromptCache();
+  }
+  
+  /**
+   * Remove the value of a composite bag item from the composite bag entity JSON object
+   * @param {string} name - name of the composite bag item
+   */
+  clearItemValue(name) {
+    delete this._entity[name];
+    this._clearShouldPromptCache();
+  }
+
+  /**
+   * Add a validation error for a composite bag item. This marks the item invalid and the
+   * the item will not be set/updated with the new invalid value. The error mesage will be 
+   * published as bot message to the user.
+   * @param {string} itemName - name of composite bag iten that validation error applies to
+   * @param {string} error - the error message
+   */
+  addValidationError(itemName, error) {
+    this._entityStatus.validationErrors[itemName] = error;
+  }  
+
+  /**
+   * Returns validation errors
+   * @return {object} validation errors keyed by item name
+   */
+  getValidationErrors() {
+    return this._entityStatus.validationErrors;
+  }  
+
+  /**
+   * Returns the disambiguation values that are found based on the last user input for a specific bag item
+   * @return {object[]} the disambiguations values. This is a string array for bag items that have a custom
+   * entity type, and a JSONObject array for bag items with a system entity type
+   * @param {string} itemName - name of the composite bag item
+   */
+  getDisambiguationValues(itemName) {
+    return this._entityStatus.disambiguationValues[itemName] || [];
+  }  
+
+  /**
+   * Sets the disambiguation values for a specific bag item
+   * @param {string} itemName - name of the composite bag item
+   * @param {object[]} disambiguationValues - this is a string array for bag items that have a custom
+   * entity type, and a JSONObject array for bag items with a system entity type
+   */
+  setDisambiguationValues(itemName, disambiguationValues) {
+    this._entityStatus.disambiguationValues[itemName] = disambiguationValues;
+  }  
+
+  /**
+   * Removes the disambiguation values that are found based on the last user input for a specific bag item
+   * @param {string} itemName - name of the composite bag item, if not specified, all disambiguation values
+   * of all items will be cleared
+   */
+  clearDisambiguationValues(itemName) {
+    if (itemName) {
+      delete this._entityStatus.disambiguationValues[itemName];
+    } else {
+      // clear all disambiguation values
+      this._entityStatus.disambiguationValues = {};      
+    }
+  }  
+
+  /**
+   * Returns the name of the bag item that is currently being resolved
+   * @return {string} the bag item name
+   */
+  getCurrentItem() {
+    return this._entityStatus.resolvingField;
+  }
+
+  /**
+   * Returns the last user input message. If the last message was not a text message, this function returns undefined
+   * @return {string} the user text message
+   */
+  getUserInput() {
+    return this._entityStatus.userInput;
+  }
+
+  /**
+   * Returns boolean flag indicating whether the component used to resolve the composite bag entity 
+   * (System.ResolveEntities or System.CommonResponse) has set the useFullEntityMatches property to true.
+   * When set to true, custom entity values are stored as JSON object, similar to the builtin entities
+   * that are always stored as JSON object.
+   * 
+   * @return {boolean} fullEntityMatches flag
+   */
+  isFullEntityMatches() {
+    return this._entityStatus.useFullEntityMatches;
+  }
+
+  /**
+   * Mark a composite bag item as skipped, which means the ResolveEntities or CommonResponse component
+   * will no longer prompt for a value for the bag item
+   * @param {string} name - name of the composite bag item 
+   */
+  skipItem(name) {
+    this._entityStatus.skippedItems.push(name);
+    //clear resolving field if set to item that is now being skipped
+    if (name === this._entityStatus.resolvingField) {
+      delete this._entityStatus.resolvingField;
+    }
+  }
+
+  /**
+   * Unmark a composite bag item as skipped, which means the ResolveEntities or CommonResponse component
+   * will prompt again for a value for the bag item
+   * @param {string} name - name of the composite bag item 
+   */
+  unskipItem(name) {
+    this._entityStatus.skippedItems =  this._entityStatus.skippedItems.filter(item => item !== name);
+  }
+
+  /**
+   * Returns true when item is marked as skipped, returns false otherwise
+   * @return {boolean} skip item flag
+   * @param {string} name - name of the composite bag item 
+   */
+  isSkippedItem(name) {
+    return this._entityStatus.skippedItems.includes(name);
+  }
+
+  /**
+   * Returns a list of the candidate bot messages created by the the ResolveEntities or CommonResponse component
+   * that will be sent to the user when you use addCandidateMessages() function.
+   * @return {object[]} list of candidate messages. Note that these messages are in the format of the conversation 
+   * message model (CMM), and can be either a text, attachment or card message payload
+   */
+  getCandidateMessages() {
+    return this.getRequest().candidateMessages;
+  }
+
+  /**
+   * Add the bot messages created by ResolveEntities or CommomResponse component to the response that will
+   * be sent to the user.
+   * Note that these messages are in the format of the conversation message model (CMM), and can be either 
+   * a text, attachment or card message payload
+   */
+  addCandidateMessages() {
+    if (this.getRequest().candidateMessages) {
+      if (!this.getResponse().messages) {
+        this.getResponse().messages = [];
+      }
+      this._logger.debug("Using candidate bot messages");
+      for (let message of this.getRequest().candidateMessages) {
+        this.getResponse().messages.push(message);
+      }  
+      this.getResponse().keepProcessing = false;
+    } else {
+      this._logger.debug("No candidate bot messages found");
+    }
+  }
+
+  /**
+   * Returns the list of messages that will be sent to the user
+   * @return list of messages
+   */
+  getMessages() {
+    return this.getResponse().messages || [];
+  }
+
+  /**
+   * Adds a message to the bot response sent to the user.
+   * @param {object} payload - can take a string payload, an object payload or a MessageModel payload.  A string or object payload will be parsed
+   * into a MessageModel payload.  If the MessageModel payload has a valid common message format, then reply will use it as
+   * messagePayload, else it will use the payload to create a rawConversationMessage (see MessageModel) as messagePayload.
+   * @param {boolean} [keepProcessing] - If set to false (the default), the message will be sent to the user and
+   * the ResolveEntities or CommonResponse component will stop any further processing, and wait for user input.
+   * If set to true, the component will continue processing, possibly sending more messages to the
+   * user before releasing the turn
+   */
+  addMessage(payload, keepProcessing) {
+    this.getResponse().keepProcessing = !!keepProcessing;  
+    this.getResponse().messages = this.getResponse().messages || [];
+    this.getResponse().messages.push(super.constructMessagePayload(payload));
+  }
+
+  /**
+   * Returns the composite bag item definitions that already had a value and have gotten a new value 
+   * extracted from the last user input.
+   * @return {string[]} list of composite bag item names
+   */
+  getItemsUpdated() {
+    return this._entityStatus.updatedEntities.map(ent => ent.name);
+  }
+
+  /**
+   * Returns the composite bag item definitions that have gotten a new value 
+   * extracted from the last user input while the user was prompted for
+   * another bag item.
+   * @return {string[]} list of composite bag item names
+   */
+  getItemsMatchedOutOfOrder() {
+    return this._entityStatus.outOfOrderMatches.map(ent => ent.name);
+  }
+
+  /**
+   * Returns the composite bag item definitions that have gotten a new value 
+   * extracted from the last user input
+   * @return {string[]} list of composite bag item names
+   */
+  getItemsMatched() {
+    return this._entityStatus.allMatches.map(ent => ent.name);
+  }
+
+  /**
+   * Returns list of enumeration values for the bag item that is currently being resolved.
+   * This list is paginated, it only includes the values in current range
+   * @return {object[]} list of enumeration values
+   */
+  getEnumValues() {
+    return this._entityStatus.enumValues;
+  }
+
+  /**
+   * A bag item of type system entity, LOCATION and ATTACHMENT has a JSON Object as value.
+   * With this function you can override the default display properties of the JSON 
+   * Object that should be used to print out a string representation of the value.
+   * @param {string} entityName - name of the system entity, or 'ATTACHMENT' or 'LOCATION' 
+   * @param {string[]} properties - array of property names
+   */
+  setSystemEntityDisplayProperties(entityName, properties) {
+    this._systemEntityDisplayProperties[entityName].properties=properties;
+  }
+
+  /**
+   * A bag item of type system entity, LOCATION and ATTACHMENT has a JSON Object as value.
+   * With this function you can override the default display function that is applied to the
+   * display property values. The function is called with each display property as an argument
+   * For example, this is the default display function for DURATION:
+   * ((startDate,endDate) => new Date(startDate)+" - "+new Date(endDate))
+   * If you want to format the dates differently, you can use a library like moments.js
+   * and call this function to override the display function
+   * Object that should be used to print out a string representation of the value.
+   * @param {string} entityName - name of the system entity, or 'ATTACHMENT' or 'LOCATION' 
+   * @param {object} displayFunction - the display function applied to the display properties
+   */
+  setSystemEntityDisplayFunction(entityName, displayFunction) {
+    this._systemEntityDisplayProperties[entityName].function=displayFunction;
+  }
+
+  /**
+   * Returns the display value for a composite bag item. 
+   * For bag items with a custom entity type, the display value returned is the value property of the
+   * JSON Object value when isFullEntityMatches returns true. When isFullEntityMatches returns false, the actual value is returned.
+   * For STRING bag item types, the display value is the same as the actual value. 
+   * For system entities, and for bag item types LOCATION and ATTACHMENT the configured display 
+   * properties and display function determine the display value
+   * @see isFullEntityMatches
+   * @see setSystemEntityDisplayProperties
+   * @see setSystemEntityDisplayFunction
+   * @return {string} display value of composite bag item
+   * @param {string} itemName - name of the composite bag item
+   */
+  getDisplayValue(itemName) {
+    let itemValue = this.getItemValue(itemName);
+    for (let item of this.getEntityItems()) {
+      if (item.name==itemName) {
+        // bag item types ATTACHMENT and LOCATION also have display properties
+        let entityName = item.entityName ? item.entityName : item.type+"_ITEM";
+        itemValue =  this._getDisplayValue(entityName, itemValue);
+      }
+    }
+    return itemValue;
+  }
+
+  /**
+   * Returns the display values for a composite bag entity. 
+   * @see getDisplayValue
+   * @see setSystemEntityDisplayProperties
+   * @see setSystemEntityDisplayFunction
+   * @return {string[]} list of display values of composite bag item
+   * @param {string} itemNames - you can specify one or more item names as argument. If you do this, only the display
+   * values of these items will be returned. If you do not specify an item name, the display values of all
+   * items in the bag will be returned.
+   */
+  getDisplayValues() {
+    // convert arguments to real array so we can use includes function
+    let args = Array.prototype.slice.call(arguments);
+    let itemValues = [];
+    for (let item of this.getEntityItems()) {
+      if (this._entity.hasOwnProperty(item.name) &amp;&amp; (args.length===0 || args.includes(item.name))) {
+        let itemValue =  this.getDisplayValue(item.name);
+        itemValues.push({name: item.name, value: itemValue});
+      }
+    }
+    return itemValues;
+  }
+
+  /**
+   * Cancels the entity resolution process and sets the 'cancel' transition on the ResolveEntities or Common Response component.
+   */
+  cancel() {
+    this.getResponse().cancel = true;
+  }
+
+  /**
+   * Sets the value of a custom property that is stored in the entity resolution context. A custom property can be 
+   * used to maintain custom state accross event handler calls while resolving the composite bag entity. 
+   * If you set the value to null, the custom property will be removed.
+   * @param {string} name - name of the custom property
+   * @param {object} value - value of the custom property
+   */
+  setCustomProperty(name, value) {
+    if (value===null) {
+      delete this._entityStatus.customProperties[name];        
+    } else {
+      this._entityStatus.customProperties[name] = value;
+    }
+  } 
+
+  /**
+   * Returns the value of a custom property that is stored in the entity resolution context. A custom property can be 
+   * used to maintain custom state accross event handler calls while resolving the composite bag entity. 
+   * @return {object} value of the custom property
+   * @param {string} name - name of the custom property
+   */
+  getCustomProperty(name) {
+    return this._entityStatus.customProperties[name];
+  }
+
+  /**
+   * Configure default display properties for all system entities, and ATTACHMENT and LOCATION item types
+   * INTERNAL ONLY - DO NOT USE
+   * @private
+   */
+  _initSystemEntityDisplayProperties() {
+    this._systemEntityDisplayProperties = {
+      "EMAIL": {"properties": ["email"]}  
+      ,"CURRENCY": {"properties": ["amount", "currency"]}  
+      ,"NUMBER": {"properties": ["number"]}  
+      ,"YES_NO": {"properties": ["yesno"]}  
+      ,"DATE": {"properties": ["date"], "function": (date => new Date(date).toDateString())}
+      ,"TIME": {"properties": ["originalString"]}
+      ,"DURATION": {"properties": ["startDate","endDate"], "function": ((startDate,endDate) => new Date(startDate).toDateString()+" - "+new Date(endDate).toDateString())}
+      ,"ADDRESS": {"properties": ["originalString"]}
+      ,"PERSON": {"properties": ["originalString"]}
+      ,"PHONE_NUMBER": {"properties": ["completeNumber"]}
+      ,"SET": {"properties": ["originalString"]}
+      ,"URL": {"properties": ["fullPath"]}   
+      ,"ATTACHMENT_ITEM": {"properties": ["url"]}   
+      ,"LOCATION_ITEM": {"properties": ["latitude, longitude"]}   
+    };  
+  }
+
+  /**
+   * Returns display value for a composite bag item raw value using the display properties
+   * configured for the system entity
+   * INTERNAL ONLY - DO NOT USE - Use getDisplayValue(itemName) instead
+   * @return {string} the display value
+   * @param {string} entityName - name of the bag item entity type
+   * @param {object} rawValue - value of the bag item
+   * @private
+   */
+  _getDisplayValue(entityName, rawValue) {
+    let props = this._systemEntityDisplayProperties[entityName];
+    let self = this;
+    let getValue = (itemValue) => {
+      if (props &amp;&amp; props.properties) {
+        let args = props.properties.map(p => itemValue[p]);
+        if (props.hasOwnProperty('function')) {
+          return props['function'](...args);
+        } else {
+          return args.join(' ');
+        }
+      } else {
+        if (self.isFullEntityMatches() &amp;&amp; itemValue &amp;&amp; itemValue.hasOwnProperty('value')) {
+          return itemValue.value;
+        } else {
+          return itemValue;
+        }
+      }
+    };
+    if (Array.isArray(rawValue)) {
+      return rawValue.map(v => getValue(v)).join(', ');
+    } else {
+      return getValue(rawValue);
+    }
+  }
+
+  /**
+   * Clears the cache with information which items should be prompted for a value
+   * INTERNAL ONLY - DO NOT USE
+   * @private
+   */
+  _clearShouldPromptCache() {
+    this._entityStatus.shouldPromptCache = {};
+  }
+
+  /**
+   * Returns the cache with information which items should be prompted for a value.
+   * @return {object} Cache is a JSON object with item names as key and a boolean value as value.
+   * INTERNAL ONLY - DO NOT USE
+   * @private
+   */
+  _getShouldPromptCache() {
+    return this._entityStatus.shouldPromptCache;
+  }
+
+}
+
+module.exports = { EntityResolutionContext }</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
