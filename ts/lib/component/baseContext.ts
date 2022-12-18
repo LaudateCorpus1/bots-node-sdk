@@ -26,7 +26,7 @@ export abstract class BaseContext {
    */
   constructor(request: any, response: any, validationSchema?: (joi: any) => any) {
 
-    const validation = validationSchema && validateRequestSchema(request, validationSchema);
+    const validation = validationSchema ? validateRequestSchema(request, validationSchema) : null;
     if (validation && validation.error) {
       const err: any = new Error('Request body malformed');
       err.name = 'badRequest';
@@ -189,7 +189,12 @@ export abstract class BaseContext {
    */
   translate(rbKey: string, ...rbArgs: string[]) {
     // create freemarker expression that will be resolved in runtime after event handler or custom component response is received
-    let exp = '${rb(\'' + rbKey + '\',\'' + rbArgs.join('\', \'') + '\')}';
+    let exp = '${rb(\'' + rbKey + '\'';
+    for (let arg of rbArgs) {
+      // MIECS-38051: only string args should be enclosed in quotes
+      typeof arg === 'string' ? exp += ',\'' + arg + '\'' : exp += ',' + arg;
+    }
+    exp += ')}';
     return exp;
   }
 

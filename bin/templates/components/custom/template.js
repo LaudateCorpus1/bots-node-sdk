@@ -13,7 +13,13 @@ module.exports = {
     },
     supportedActions: ['weekday', 'weekend']
   }),
-  invoke: (context, done) => {
+
+
+  /**
+   * invoke methods gets called when the custom component state is executed in the dialog flow
+   * @param {CustomComponentContext} context 
+   */
+  invoke: async (context) => {
     // Retrieve the value of the 'human' component property.
     const { human } = context.properties();
     // Determine the current date
@@ -24,6 +30,5 @@ module.exports = {
     context.reply(`Greetings ${human}`)
       .reply(`Today is ${now.toLocaleDateString()}, a ${dayOfWeek}`)
       .transition(isWeekend ? 'weekend' : 'weekday');       
-    done();  
   }
 };
